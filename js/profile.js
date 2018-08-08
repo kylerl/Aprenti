@@ -1,11 +1,15 @@
 window.onload = getProfile()
 
 function getProfile() {
-    firebase.database().ref('/Profiles').on('value', (snapshot) => {
+    firebase.database().ref('/profiles').on('value', (snapshot) => {
         let data = snapshot.val()
         for (key in data) {
+            // console.log(data[key].firstName)
             if (localStorage.getItem("email") === data[key].email) {
-                console.log(data[key].email)
+                console.log("yeet")
+                let yourProfile = data[].filter(data[key].email === localStorage.getItem("email"))
+                console.log(yourProfile)
+                
             }
 
             // displayPostings.innerHTML += `
