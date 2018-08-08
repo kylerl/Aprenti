@@ -34,7 +34,7 @@ submitBtn.addEventListener("click", e => {
     }
     // console.log (posting)
 
-    firebase.database().ref("/").push(posting)
+    firebase.database().ref("/internshipOpportunities").push(posting)
 })
 
 

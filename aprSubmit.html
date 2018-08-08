@@ -9,17 +9,18 @@
     <meta name="author" content="">
 
     <title>Submit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!--<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>-->
 
     <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <!--<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">-->
 
     <!-- Custom styles for this template -->
     <link href="css/profilecreative.css" rel="stylesheet">
@@ -28,90 +29,97 @@
     <link rel="stylesheet" href="css/opportunities.css" type="text/css" />
 
 
-
-    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <!--dumb firebase-->
+    <!--<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>-->
+    <!--<script>-->
+    <!--    Initialize Firebase-->
+    <!--    var config = {-->
+    <!--        apiKey: "AIzaSyAS4R5UUI4pkuw7ous06mJJwOMokNBGmBI",-->
+    <!--        authDomain: "aprentis-3d38c.firebaseapp.com",-->
+    <!--        databaseURL: "https://aprentis-3d38c.firebaseio.com",-->
+    <!--        projectId: "aprentis-3d38c",-->
+    <!--        storageBucket: "aprentis-3d38c.appspot.com",-->
+    <!--        messagingSenderId: "945853405556"-->
+    <!--    };-->
+    <!--    firebase.initializeApp(config);-->
+    <!--</script>-->
+    
+    <!--beter?-->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyAS4R5UUI4pkuw7ous06mJJwOMokNBGmBI",
-            authDomain: "aprentis-3d38c.firebaseapp.com",
-            databaseURL: "https://aprentis-3d38c.firebaseio.com",
-            projectId: "aprentis-3d38c",
-            storageBucket: "aprentis-3d38c.appspot.com",
-            messagingSenderId: "945853405556"
+            apiKey: "AIzaSyA4Nhcymqp3TP8cXXNUH8n8_V6J8bph1rk",
+            authDomain: "less-bad-aprentis.firebaseapp.com",
+            databaseURL: "https://less-bad-aprentis.firebaseio.com",
+            projectId: "less-bad-aprentis",
+            storageBucket: "",
+            messagingSenderId: "360052246152"
         };
         firebase.initializeApp(config);
     </script>
+
 </head>
 
 <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
 
-        <!--<img src="AprenTis2.png" id="navbarLogo" alt="APRENTIS" style="width:8%;height:auto;"></img>-->
-
+    <!--<img src="AprenTis2.png" id="navbarLogo" alt="APRENTIS" style="width:8%;height:auto;"></img>-->
 
 
 
 
-        <!-- TODO: Have form below send form data to firebase -->
-        <div class="container jumboBoi">
-            <div class="row">
-                <div class = "col-6"></div>
-                <div class = "col">
-                <div class="jumbotron">
-                    <h1 class="display-4 text-white">Post Internship Form</h1>
-                    <p class="lead">
-                        <form>
-                            <div class="form-group text-white">
-                                <label for="postingTitle">Posting Title</label>
-                                <input type="text" class="form-control" id="postingTitle">
-                            </div>
-                            <div class="form-group">
-                                <label for="postingDescription">Posting Description</label>
-                                <textarea type="password" class="form-control" id="postingDescription" rows="3"></textarea>
-                            </div>
-                            <!--<div class="form-group">-->
-                            <!--  <label for="postingImage">Image URL</label>-->
-                            <!--  <input type="text" class="form-control" id="postingImage">-->
-                            <!--  <small class="form-text text-muted">Please copy an image URL above</small>-->
-                            <!--</div>-->
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="text" class="form-control" id="email">
-                                <small class="form-text text-muted">Please submit your email</small>
-                            </div>
-                            <!--<div class="form-group">-->
-                            <!--  <label for="price">Asking Price</label>-->
-                            <!--  <input type="text" class="form-control" id="price">-->
-                            <!--  <small class="form-text text-muted">Please submit your asking price</small>-->
-                            <!--</div>-->
-                            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-                        </form>
-                    </p>
-                </div>
+
+    <!-- TODO: Have form below send form data to firebase -->
+    <div class="container jumboBoi">
+        <div class="row justify-content-around">
+            <!--<div class="col-6"></div>-->
+            <div class="col">
+                <div class="jumbotron mx auto">
+                    <h1 class="display-4 text-white">Post Internship</h1>
+                    <!--<p class="lead">-->
+                    <form>
+                        <div class="form-group text-white">
+                            <!--important id="postingTitle"-->
+                            <label for="postingTitle">Position</label>
+                            <input type="text" class="form-control" id="postingTitle">
+                        </div>
+                        <div class="form-group text-white">
+                            <!--important id="postingDescription"-->
+                            <label for="postingDescription">Business/ Position Description</label>
+                            <textarea type="password" class="form-control" id="postingDescription" rows="3"></textarea>
+                        </div>
+                        <div class="form-group text-white">
+                            <!--important id="email"-->
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                    </form>
+                    <!--</p>-->
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <!-- TODO: Have form above send form data to firebase -->
+    <!-- TODO: Have form above send form data to firebase -->
 
 
-        <!-- Bootstrap core JavaScript -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <!--<script src="vendor/jquery/jquery.min.js"></script>-->
+    <!--<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
 
-        <!-- Plugin JavaScript -->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-        <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-        <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <!--<script src="vendor/jquery-easing/jquery.easing.min.js"></script>-->
+    <!--<script src="vendor/scrollreveal/scrollreveal.min.js"></script>-->
+    <!--<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>-->
 
-        <!-- Custom scripts for this template -->
-        <!--<script src="js/creative.min.js"></script>-->
+    <!-- Custom scripts for this template -->
+    <!--<script src="js/creative.min.js"></script>-->
 
-        <script type="text/javascript" src="js/submit.js"></script>
+    <script type="text/javascript" src="js/submit.js"></script>
 
 </body>
 

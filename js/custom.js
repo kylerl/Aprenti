@@ -23,26 +23,47 @@ let registerButton = document.querySelector("#register")
 // })
 
 registerButton.addEventListener("click", e => {
-    let emailCreate = document.querySelector("#makeEmail").value
-    let passwordCreate = document.querySelector("#makePassword").value
-    createAccount(emailCreate, passwordCreate)
-    console.log(emailCreate)
-    console.log(passwordCreate)
+    e.preventDefault()
+
+    let firstName = document.querySelector("#first_name").value
+    let lastName = document.querySelector("#last_name").value
+    let schoolName = document.querySelector("#school_name").value
+    let email = document.querySelector("#makeEmail").value
+    let password = document.querySelector("#makePassword").value
+    let profile = {
+        firstName: firstName,
+        lastName: lastName,
+        schoolName: schoolName,
+        email: email
+    }
+    console.log(profile)
+    firebase.database().ref('/profiles').push(profile)
+    console.log('firebase')
+    createAccount(email, password)
+
+
+    // console.log(emailCreate)
+    // console.log(passwordCreate)
 })
 
 
 
 function createAccount(email, password) {
-
+    localStorage.setItem("email", email)
     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(data) {
 
         console.log(password)
+        console.log(email)
+
+        window.location.href = "http://aprentis-internships.me/profile.html"
+
         // signUp.innerHTML = `Sign Out `
-        saveInfo(data)
+        // saveInfo(data)
     }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
+        console.log(errorMessage)
         // ...
     });
 

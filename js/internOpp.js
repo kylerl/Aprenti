@@ -1,10 +1,10 @@
 function getPostings() {
-    firebase.database().ref('/').on('value', (snapshot) => {
+    firebase.database().ref('/internshipOpportunities').on('value', (snapshot) => {
         let data = snapshot.val()
         let displayPostings = document.querySelector('#postings')
         for (key in data) {
             displayPostings.innerHTML += `
-            <div class="jumbotron">
+            <div class="jumbotron jumboBoi">
                 <h1 class="text-uppercase text-white">${data[key].title}</h1>
                 <hr class="my-4">
                 <p class="text-white">${data[key].description}</p>
